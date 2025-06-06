@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --h2tekst: "Cormorant Infant", serif;
+}
+:root {
+  --ptekst: "Proza Libre", serif;
+}
+:root {
+  --main-farve: #fffdee;
+}
+:root {
+  --rød: #f16e64;
+}
+/**INDEX**/
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.design {
+  width: 80%;
+  max-width: 600px;
+  margin: -10px 20px;
+}
+h2 {
+  font-family: var(--h2tekst);
+  font-weight: bold;
+}
+
+.light-heading {
+  font-family: var(--h2tekst);
+  font-weight: 300;
+  font-size: medium;
+}
+
+body {
+  background-color: var(--main-farve);
+}
+.VELKOMMEN {
+  display: flex;
+  justify-content: center; /* Centrer horisontalt */
+  align-items: center; /* Centrer vertikalt */
+  letter-spacing: 1.5px;
+  margin-top: 27px;
+  text-decoration: underline;
+  color: var(--rød);
+}
+.p-forside {
+  color: var(--rød);
+  line-height: 25px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  text-align: center;
+  margin: 14px auto 20px;
+  padding: 0 26px;
+  font-family: var(--ptekst);
+}
+.button {
+  font-family: var(--ptekst);
+  display: inline-block;
+  width: 140px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--rød);
+  color: white;
+  font-size: medium;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+  margin-left: 50px;
+  margin-top: 10px;
+  text-align: center; /* centrerer teksten horisontalt */
+  text-decoration: none;
+}
+/**INDEX**/
+/**OM MIG**/
+.om_mig_design {
+  width: 40%;
+  max-width: 600px;
+  margin: -2px 117px;
+}
+.onair {
+  width: auto;
+  max-width: 250px;
+  margin: 30px 13px;
+  border: 1px solid black;
+}
+.profil {
+  display: flex;
+  align-items: center;
+  margin-left: -8px;
+}
+.billede_tekst {
+  font-family: var(--ptekst);
+  margin-left: -10px;
+  line-height: 29px;
+}
+.beskrivelse {
+  color: var(--rød);
+  line-height: 28px;
+  font-size: 16px;
+  text-align: left;
+  margin: 14px 12px 20px;
+  padding: 0 26px;
+  font-family: var(--ptekst);
+}
+.is {
+  width: 83%;
+  max-width: 600px;
+  margin: 0px 37px;
+  margin-bottom: 50px;
+  border: 1px solid var(--rød);
+}
+/**OM MIG**/
+
+/**MENU**/
+header {
+  padding: 10px;
+  background-color: var(--main-farve);
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.link-heading {
+  text-decoration: none;
+  color: inherit;
+}
+.center {
+  position: absolute; /* Dette er styling på "2025" */
+  left: 50%; /* Flytter elementets venstre kant til midten */
+  transform: translateX(-50%); /* Gør at teksten er perfekt centreret */
+}
+
+.burger {
+  display: none;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 25px;
+  height: 1px;
+  background-color: #333333;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    position: relative;
+  }
+
+  .burger {
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: -1px;
+    z-index: 101;
+  }
+
+  .menu {
+    display: none;
+    justify-content: center;
+    list-style: none;
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #b0ad88;
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Stak menupunkterne lodret */
+    align-items: center; /* Centrer horisontalt */
+    height: 200px;
+    gap: 20px; /* gap mellem teksten */
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/**MENU**/
+
+/**FOOTER**/
+footer {
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: transparent; /* eller brug en farve hvis du vil */
+  font-size: 12px;
+  text-align: center;
+}
+
+footer .insta {
+  position: fixed;
+  bottom: 1px;
+  left: 6.5px;
+}
+
+footer .insta a {
+  font-size: 30px;
+  color: black;
+  text-decoration: none;
+}
+/**FOOTER**/
