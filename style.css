@@ -3,23 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --h2tekst: "Cormorant Infant", serif;
   --ptekst: "Proza Libre", serif;
   --main-farve: #fffdee;
   --rød: #f16e64;
 }
+
 /**INDEX**/
+
 img {
   width: 100%;
   height: auto;
   display: block;
 }
+
 .design {
   width: 80%;
   max-width: 600px;
   margin: -10px 20px;
 }
+
 h2 {
   font-family: var(--h2tekst);
   font-weight: bold;
@@ -34,6 +39,7 @@ h2 {
 body {
   background-color: var(--main-farve);
 }
+
 .VELKOMMEN {
   display: flex;
   justify-content: center; /* Centrer horisontalt */
@@ -43,6 +49,7 @@ body {
   text-decoration: underline;
   color: var(--rød);
 }
+
 .p-forside {
   color: var(--rød);
   line-height: 25px;
@@ -53,6 +60,7 @@ body {
   padding: 0 26px;
   font-family: var(--ptekst);
 }
+
 .button {
   font-family: var(--ptekst);
   display: inline-block;
@@ -73,29 +81,113 @@ body {
   text-align: center; /* centrerer teksten horisontalt */
   text-decoration: none;
 }
+
+.v:hover {
+  transform: scale(1.1) rotate(-2deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #c85952;
+}
+
+.h:hover {
+  transform: scale(1.1) rotate(2deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #c85952;
+}
+
 /**INDEX**/
+
+/**PORTFOLIO**/
+
+.portfolio {
+  width: 47%;
+  max-width: 600px;
+  margin: 2px 99px;
+}
+
+.billeder {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* lille afstand mellem billederne */
+  align-items: center;
+}
+
+.billede-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.billede-container img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Det grå lag med tekst */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+}
+
+.overlay p {
+  color: white;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Når man holder musen over, går den over til overlay */
+.billede-container:hover .overlay {
+  opacity: 1;
+}
+
+/* Når man holder musen over, forstørres billedet yessss */
+.billede-container:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/**PORTFOLIO**/
+
 /**OM MIG**/
+
 .om_mig_design {
   width: 40%;
   max-width: 600px;
   margin: -2px 117px;
 }
+
 .onair {
   width: auto;
   max-width: 250px;
   margin: 30px 13px;
   border: 1px solid black;
 }
+
 .profil {
   display: flex;
   align-items: center;
   margin-left: -8px;
 }
+
 .billede_tekst {
   font-family: var(--ptekst);
   margin-left: -10px;
   line-height: 29px;
 }
+
 .beskrivelse {
   color: var(--rød);
   line-height: 28px;
@@ -105,6 +197,7 @@ body {
   padding: 0 26px;
   font-family: var(--ptekst);
 }
+
 .is {
   width: 83%;
   max-width: 600px;
@@ -112,6 +205,7 @@ body {
   margin-bottom: 50px;
   border: 1px solid var(--rød);
 }
+
 .kontakt-info {
   margin-top: -45px;
   margin-left: 40px;
@@ -119,23 +213,28 @@ body {
   font-family: var(--ptekst);
   font-size: 13.7px;
 }
+
 /**OM MIG**/
 
 /**MENU**/
+
 header {
   padding: 10px;
   background-color: var(--main-farve);
 }
+
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
+
 .link-heading {
   text-decoration: none;
   color: inherit;
 }
+
 .center {
   position: absolute; /* det her er styling på "2025" */
   left: 50%; /* Flytter elementets venstre kant til midten */
@@ -228,6 +327,7 @@ header {
 /* ::after er et pseudo-element */
 /* Det betyder, vi laver en lille ekstra ting efter teksten, som en streg under linket */
 /* Denne streg starter som usynlig (bredde 0%), men vokser når musen kommer over linket */
+
 .menu a:not(.aktiv-link)::after {
   content: ""; /* Der kommer en tom "ting" efter linket (det er vores streg) */
   position: absolute; /* Den kan placeres præcist under linket */
@@ -249,6 +349,7 @@ header {
 /* Aktivt link – den side man er på */
 /* Farven bliver rød og teksten bliver lidt tykkere (fed) */
 /* Der kommer altid en rød streg under teksten, som ikke forsvinder */
+
 .aktiv-link {
   position: relative; /* Gør det muligt at sætte noget oven på linket */
   color: var(--rød); /* Teksten bliver rød */
@@ -268,6 +369,7 @@ header {
 /**MENU**/
 
 /**FOOTER**/
+
 footer {
   position: relative;
   width: 100%;
@@ -288,4 +390,5 @@ footer .insta a {
   color: black;
   text-decoration: none;
 }
+
 /**FOOTER**/
