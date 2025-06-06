@@ -5,14 +5,8 @@
 }
 :root {
   --h2tekst: "Cormorant Infant", serif;
-}
-:root {
   --ptekst: "Proza Libre", serif;
-}
-:root {
   --main-farve: #fffdee;
-}
-:root {
   --rød: #f16e64;
 }
 /**INDEX**/
@@ -118,6 +112,13 @@ body {
   margin-bottom: 50px;
   border: 1px solid var(--rød);
 }
+.kontakt-info {
+  margin-top: -45px;
+  margin-left: 40px;
+  color: var(--rød);
+  font-family: var(--ptekst);
+  font-size: 13.7px;
+}
 /**OM MIG**/
 
 /**MENU**/
@@ -136,7 +137,7 @@ header {
   color: inherit;
 }
 .center {
-  position: absolute; /* Dette er styling på "2025" */
+  position: absolute; /* det her er styling på "2025" */
   left: 50%; /* Flytter elementets venstre kant til midten */
   transform: translateX(-50%); /* Gør at teksten er perfekt centreret */
 }
@@ -197,7 +198,7 @@ header {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     z-index: 100;
     display: flex; /* Flex layout */
-    flex-direction: column; /* Stak menupunkterne lodret */
+    flex-direction: column; /* Stak menupunkterne oven på hinanden */
     align-items: center; /* Centrer horisontalt */
     height: 200px;
     gap: 20px; /* gap mellem teksten */
@@ -214,6 +215,56 @@ header {
   }
 }
 
+/* Almindelige links */
+.menu a {
+  position: relative; /* Gør det muligt at sætte noget oven på linket */
+  text-decoration: none; /* Fjerner den normale understregning på linket */
+  color: black; /* Linkets tekstfarve er sort */
+  transition: color 0.5s ease; /* Når farven ændres, sker det blødt på 0,5 sekunder */
+  font-weight: normal; /* Almindelig tykkelse på teksten */
+}
+
+/* Hover-effekt (gælder kun ikke-aktive links) */
+/* ::after er et pseudo-element */
+/* Det betyder, vi laver en lille ekstra ting efter teksten, som en streg under linket */
+/* Denne streg starter som usynlig (bredde 0%), men vokser når musen kommer over linket */
+.menu a:not(.aktiv-link)::after {
+  content: ""; /* Der kommer en tom "ting" efter linket (det er vores streg) */
+  position: absolute; /* Den kan placeres præcist under linket */
+  left: 0; /* Starter helt til venstre */
+  bottom: -4px; /* Lidt under teksten */
+  width: 0%; /* Starter med at være usynlig (ingen bredde) */
+  height: 2px; /* Stregen er 2 pixels høj */
+  background-color: var(--rød); /* Stregen har rød farve */
+  transition: width 0.4s ease; /* Når bredden ændrer sig, sker det blødt på 0,4 sekunder */
+}
+
+/* Når musen er over linket (hover) eller linket har fokus (for fx tastatur) */
+/* vokser stregen under linket til fuld bredde (100%) og bliver synlig */
+.menu a:not(.aktiv-link):hover::after,
+.menu a:not(.aktiv-link):focus::after {
+  width: 100%; /* Stregen bliver fuld længde under teksten */
+}
+
+/* Aktivt link – den side man er på */
+/* Farven bliver rød og teksten bliver lidt tykkere (fed) */
+/* Der kommer altid en rød streg under teksten, som ikke forsvinder */
+.aktiv-link {
+  position: relative; /* Gør det muligt at sætte noget oven på linket */
+  color: var(--rød); /* Teksten bliver rød */
+  font-weight: bold; /* Teksten bliver fed */
+}
+
+.aktiv-link::after {
+  content: ""; /* Samme som før: en streg under linket */
+  position: absolute; /* Kan placeres præcist */
+  left: 0; /* Starter helt til venstre */
+  bottom: -4px; /* Lidt under teksten */
+  width: 100%; /* Stregen er altid fuld bredde */
+  height: 2px; /* Stregen er 2 pixels høj */
+  background-color: var(--rød); /* Stregen er rød */
+}
+
 /**MENU**/
 
 /**FOOTER**/
@@ -221,7 +272,7 @@ footer {
   position: relative;
   width: 100%;
   padding: 10px 20px;
-  background-color: transparent; /* eller brug en farve hvis du vil */
+  background-color: transparent;
   font-size: 12px;
   text-align: center;
 }
