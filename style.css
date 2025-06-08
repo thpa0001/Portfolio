@@ -260,7 +260,8 @@ header {
   transition: 0.2s linear;
 }
 
-@media screen and (max-width: 800px) {
+/**MOBIL**/
+@media screen and (max-width: 767px) {
   nav {
     position: relative;
   }
@@ -414,19 +415,21 @@ footer .insta a {
 
 /**DESKTOP**/
 
-/**MENU-DESKTOP**/
-
 @media (min-width: 768px) {
+  /**MENU-DESKTOP**/
+
   .burger {
     display: none;
   }
 
   .center {
-    font-size: 24px;
     font-family: var(--h2tekst);
-    font-weight: 300;
+    font-size: 20px;
     color: black;
-    margin: 0 30px 0 0;
+    font-weight: 300;
+    text-decoration: none;
+    margin-left: -720px;
+    margin-top: 50px;
   }
 
   .header-content {
@@ -449,7 +452,7 @@ footer .insta a {
 
   .menu {
     display: flex;
-    gap: 192px;
+    gap: 170px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -507,23 +510,25 @@ footer .insta a {
   .design {
     width: 100%;
     max-width: 875px;
-    margin: -20px 257px;
+    margin: -20px 261px;
     transition: opacity 0.3s ease;
+    position: relative;
+    z-index: 0;
   }
 
   .VELKOMMEN {
-    font-size: 40px;
+    font-size: 45px;
     text-align: left;
     margin-top: 24px;
     padding: 19px;
-    margin-left: -243px;
+    margin-left: -290px;
   }
 
   .p-forside {
     font-size: 23px;
     line-height: 2;
     text-align: left;
-    max-width: 500px;
+    max-width: 585px;
     margin: 0;
     padding: 0;
   }
@@ -533,16 +538,18 @@ footer .insta a {
     display: flex;
     align-items: flex-start;
     width: fit-content;
-    margin: 0 auto 0 170px; /* top 0, højre auto, bund 0, venstre 230px */
+    margin: 0 auto 0 98px; /* top 0, højre auto, bund 0, venstre 230px */
     padding: 20px;
+    position: relative;
   }
 
   .tekst-delen {
     flex: 1;
     text-align: left;
     margin: 0 0 40px 0;
+    margin-right: 0px;
     padding: 0;
-    margin-right: 250px;
+    margin-right: 300px;
   }
 
   .knap-container {
@@ -576,6 +583,69 @@ footer .insta a {
 
   /**INDEX-DESKTOP**/
 
+  /**PORTFOLIO-DESKTOP**/
+
+  .portfolio {
+    width: 40%;
+    max-width: 600px;
+    margin: -42px 99px;
+    padding-bottom: 100px;
+  }
+
+  .portfolio-billeder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto; /* Centrerer hele main */
+    padding: 2rem;
+  }
+
+  .billeder {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    row-gap: 3rem;
+    max-width: 940px;
+    width: 100%;
+  }
+
+  .billede-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .billede-container img {
+    width: 100%;
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  /**PORTFOLIO-DESKTOP**/
+
+  /**OM MIG-DESKTOP**/
+
+  .om_mig_design {
+    width: 40%;
+    max-width: 600px;
+    margin: -42px 99px;
+    padding-bottom: 100px;
+  }
+
+  /**OM MIG-DESKTOP**/
+
   /**FOOTER-DESKTOP**/
 
   .fab {
@@ -585,5 +655,8 @@ footer .insta a {
     position: relative;
     top: -10px;
   }
+
   /**FOOTER-DESKTOP**/
 }
+
+/**DESKTOP**/
