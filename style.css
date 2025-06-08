@@ -208,7 +208,7 @@ body {
 
 .kontakt-info {
   margin-top: -45px;
-  margin-left: 64px;
+  margin-left: 58px;
   color: var(--rød);
   font-family: var(--ptekst);
   font-size: 13.7px;
@@ -273,31 +273,42 @@ header {
     z-index: 101;
   }
 
+  .burger.active {
+    position: fixed;
+    top: 11px;
+    right: 10px;
+    z-index: 101;
+  }
+
   .menu {
     display: none;
     justify-content: center;
     list-style: none;
+    width: 100%;
   }
 
   .burger.active .line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
+    background-color: white;
   }
 
   .burger.active .line:nth-child(2) {
     opacity: 0;
+    background-color: white;
   }
 
   .burger.active .line:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+    background-color: white;
   }
 
   nav.active .menu {
     display: block;
     background-color: #b0ad88;
-    position: absolute;
-    top: -7px;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     z-index: 100;
     display: flex; /* Flex layout */
@@ -398,4 +409,181 @@ footer .insta a {
 .insta:hover {
   transform: scale(1.4) rotate(360deg);
 }
+
 /**FOOTER**/
+
+/**DESKTOP**/
+
+/**MENU-DESKTOP**/
+
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .center {
+    font-size: 24px;
+    font-family: var(--h2tekst);
+    font-weight: 300;
+    color: black;
+    margin: 0 30px 0 0;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-content > :not(.center) {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 30px;
+    height: 60px;
+    margin: 0;
+  }
+
+  .menu {
+    display: flex;
+    gap: 192px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    margin: 0;
+  }
+
+  .menu a {
+    font-family: var(--h2tekst);
+    font-size: 20px;
+    color: black;
+    font-weight: 300;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .aktiv-link {
+    color: var(--rød);
+    font-weight: bold;
+  }
+
+  .aktiv-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--rød);
+  }
+
+  .menu a:not(.aktiv-link)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--rød);
+    transition: width 0.4s ease;
+  }
+
+  .menu a:not(.aktiv-link):hover::after,
+  .menu a:not(.aktiv-link):focus::after {
+    width: 100%;
+  }
+
+  /**MENU-DESKTOP**/
+
+  /**INDEX-DESKTOP**/
+
+  .design {
+    width: 100%;
+    max-width: 875px;
+    margin: -20px 257px;
+    transition: opacity 0.3s ease;
+  }
+
+  .VELKOMMEN {
+    font-size: 40px;
+    text-align: left;
+    margin-top: 24px;
+    padding: 19px;
+    margin-left: -243px;
+  }
+
+  .p-forside {
+    font-size: 23px;
+    line-height: 2;
+    text-align: left;
+    max-width: 500px;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Container for tekst og knapper - vi laver flex:)) */
+  .forside-container {
+    display: flex;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 0 auto 0 170px; /* top 0, højre auto, bund 0, venstre 230px */
+    padding: 20px;
+  }
+
+  .tekst-delen {
+    flex: 1;
+    text-align: left;
+    margin: 0 0 40px 0;
+    padding: 0;
+    margin-right: 250px;
+  }
+
+  .knap-container {
+    display: flex;
+    flex-direction: column;
+    gap: 151px;
+    margin-top: 150px;
+    margin-left: 30px;
+  }
+
+  .button {
+    font-family: var(--ptekst);
+    display: inline-block;
+    width: 270px;
+    height: 110px;
+    line-height: 110px;
+    border-radius: 17px;
+    border: none;
+    background-color: var(--rød);
+    color: white;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    margin-left: 0;
+    margin-top: 0px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  /**INDEX-DESKTOP**/
+
+  /**FOOTER-DESKTOP**/
+
+  .fab {
+    font-weight: 400;
+    font-size: 50px;
+    margin-left: 15px;
+    position: relative;
+    top: -10px;
+  }
+  /**FOOTER-DESKTOP**/
+}
