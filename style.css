@@ -208,12 +208,16 @@ body {
 
 .kontakt-info {
   margin-top: -45px;
-  margin-left: 40px;
+  margin-left: 64px;
   color: var(--rød);
   font-family: var(--ptekst);
   font-size: 13.7px;
+  text-decoration: none;
 }
-
+.mail {
+  font-family: var(--ptekst);
+  color: var(--rød);
+}
 /**OM MIG**/
 
 /**MENU**/
@@ -383,6 +387,7 @@ footer .insta {
   position: fixed;
   bottom: 1px;
   left: 6.5px;
+  transition: transform 0.3s ease-in-out;
 }
 
 footer .insta a {
@@ -390,5 +395,7 @@ footer .insta a {
   color: black;
   text-decoration: none;
 }
-
+.insta:hover {
+  transform: scale(1.4) rotate(360deg);
+}
 /**FOOTER**/
