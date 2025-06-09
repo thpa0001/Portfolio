@@ -54,7 +54,7 @@ body {
   color: var(--rød);
   line-height: 25px;
   letter-spacing: 1px;
-  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
   margin: 14px auto 20px;
   padding: 0 26px;
@@ -145,7 +145,7 @@ body {
 .overlay p {
   color: white;
   margin: 0;
-  font-size: 16px;
+  font-size: 1rem;
   max-height: 90%; /* så den ikke løber udenfor billedet */
   overflow-y: auto; /* så man kan scrolle i teksten */
   padding-right: 10px; /* så scrollbar ikke klistrer til teksten */
@@ -201,7 +201,7 @@ body {
 .beskrivelse {
   color: var(--rød);
   line-height: 28px;
-  font-size: 16px;
+  font-size: 1rem;
   text-align: left;
   margin: 14px 12px 20px;
   padding: 0 26px;
@@ -221,7 +221,7 @@ body {
   margin-left: 58px;
   color: var(--rød);
   font-family: var(--ptekst);
-  font-size: 13.7px;
+  font-size: 0.85625rem;
   text-decoration: none;
 }
 
@@ -231,7 +231,7 @@ body {
 }
 
 .første-bogstav {
-  font-size: 150%;
+  font-size: 1.5rem;
   font-weight: bold;
   float: left;
   padding-right: 4px;
@@ -343,7 +343,7 @@ header {
   }
 
   nav.active .menu a {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: white;
     text-decoration: none;
   }
@@ -410,7 +410,7 @@ footer {
   width: 100%;
   padding: 10px 20px;
   background-color: transparent;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-align: center;
 }
 
@@ -422,7 +422,7 @@ footer .insta {
 }
 
 footer .insta a {
-  font-size: 30px;
+  font-size: 1.875rem;
   color: black;
   text-decoration: none;
 }
@@ -443,7 +443,7 @@ footer .insta a {
 
   .center {
     font-family: var(--h2tekst);
-    font-size: 20px;
+    font-size: 1.25rem;
     color: black;
     font-weight: 300;
     text-decoration: none;
@@ -483,7 +483,7 @@ footer .insta a {
 
   .menu a {
     font-family: var(--h2tekst);
-    font-size: 20px;
+    font-size: 1.25rem;
     color: black;
     font-weight: 300;
     text-decoration: none;
@@ -536,7 +536,7 @@ footer .insta a {
   }
 
   .VELKOMMEN {
-    font-size: 45px;
+    font-size: 2.8125rem;
     text-align: left;
     margin-top: 24px;
     padding: 19px;
@@ -544,7 +544,7 @@ footer .insta a {
   }
 
   .p-forside {
-    font-size: 23px;
+    font-size: 1.4375rem;
     line-height: 2;
     text-align: left;
     max-width: 585px;
@@ -589,7 +589,7 @@ footer .insta a {
     border: none;
     background-color: var(--rød);
     color: var(--main-farve);
-    font-size: 24px;
+    font-size: 1.5rem;
     letter-spacing: 1.5px;
     cursor: pointer;
     box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.3);
@@ -685,7 +685,7 @@ footer .insta a {
     margin-left: -80px;
     line-height: 1.4;
     max-width: 600px;
-    font-size: 23px;
+    font-size: 1.4375rem;
   }
 
   .billede_tekst strong {
@@ -726,7 +726,7 @@ footer .insta a {
 
   .beskrivelse {
     color: var(--rød);
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: left;
     font-family: var(--ptekst);
     line-height: 40px;
@@ -737,7 +737,7 @@ footer .insta a {
     margin-left: 85px;
     color: var(--rød);
     font-family: var(--ptekst);
-    font-size: 20.7px;
+    font-size: 1.29rem;
     text-decoration: none;
   }
   /**OM MIG-DESKTOP**/
@@ -746,7 +746,7 @@ footer .insta a {
 
   .fab {
     font-weight: 400;
-    font-size: 50px;
+    font-size: 3.125rem;
     margin-left: 15px;
     position: relative;
     top: -10px;
