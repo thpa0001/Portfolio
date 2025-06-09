@@ -148,7 +148,7 @@ body {
   font-size: 1rem;
   max-height: 90%; /* så den ikke løber udenfor billedet */
   overflow-y: auto; /* så man kan scrolle i teksten */
-  padding-right: 10px; /* så scrollbar ikke klistrer til teksten */
+  padding: 10px; /* så scrollbar ikke klistrer til teksten */
 }
 
 /* Når man holder musen over, går den over til overlay */
