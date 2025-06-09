@@ -70,7 +70,7 @@ body {
   border-radius: 12px;
   border: none;
   background-color: var(--rød);
-  color: white;
+  color: var(--main-farve);
   font-size: medium;
   letter-spacing: 1.5px;
   cursor: pointer;
@@ -132,7 +132,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 8px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -146,6 +146,9 @@ body {
   color: white;
   margin: 0;
   font-size: 16px;
+  max-height: 90%; /* så den ikke løber udenfor billedet */
+  overflow-y: auto; /* så man kan scrolle i teksten */
+  padding-right: 10px; /* så scrollbar ikke klistrer til teksten */
 }
 
 /* Når man holder musen over, går den over til overlay */
@@ -186,6 +189,13 @@ body {
   font-family: var(--ptekst);
   margin-left: -10px;
   line-height: 29px;
+  color: var(--main-farve);
+  background-color: var(--rød);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 3px 2px 1px black;
+  margin-top: 10px;
+  border: 1px solid black;
 }
 
 .beskrivelse {
@@ -214,10 +224,19 @@ body {
   font-size: 13.7px;
   text-decoration: none;
 }
+
 .mail {
   font-family: var(--ptekst);
   color: var(--rød);
 }
+
+.første-bogstav {
+  font-size: 150%;
+  font-weight: bold;
+  float: left;
+  padding-right: 4px;
+}
+
 /**OM MIG**/
 
 /**MENU**/
@@ -510,7 +529,7 @@ footer .insta a {
   .design {
     width: 100%;
     max-width: 875px;
-    margin: -20px 261px;
+    margin: -22px 275px;
     transition: opacity 0.3s ease;
     position: relative;
     z-index: 0;
@@ -569,7 +588,7 @@ footer .insta a {
     border-radius: 17px;
     border: none;
     background-color: var(--rød);
-    color: white;
+    color: var(--main-farve);
     font-size: 24px;
     letter-spacing: 1.5px;
     cursor: pointer;
@@ -631,6 +650,8 @@ footer .insta a {
     text-align: center;
     padding: 1rem 0;
     font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    line-height: 31px;
   }
 
   /**PORTFOLIO-DESKTOP**/
@@ -638,12 +659,87 @@ footer .insta a {
   /**OM MIG-DESKTOP**/
 
   .om_mig_design {
-    width: 40%;
+    width: 21%;
     max-width: 600px;
-    margin: -42px 99px;
+    margin: -34px 546px;
     padding-bottom: 100px;
   }
 
+  .profil {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 216px;
+    margin-left: 20px;
+  }
+
+  .onair {
+    position: relative;
+    max-width: 650px;
+    width: 100%;
+    margin: 0;
+    left: 60px;
+  }
+
+  .billede_tekst {
+    text-align: left;
+    margin-left: -80px;
+    line-height: 1.4;
+    max-width: 600px;
+    font-size: 23px;
+  }
+
+  .billede_tekst strong {
+    display: block; /* Sørger for at hvert strong starter på ny linje */
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "tekstJ tekstU"
+      "tekstG kontakt"; /*Dette "tegner" områderne de hver især skal placere sig*/
+    row-gap: 0rem;
+    padding: 1rem;
+    margin-left: 33px;
+  }
+
+  /* Tildel områder */
+  .tekst-J {
+    grid-area: tekstJ;
+  }
+
+  .tekst-U {
+    grid-area: tekstU;
+  }
+
+  .tekst-G {
+    grid-area: tekstG;
+  }
+
+  .billede-kontakt {
+    grid-area: kontakt;
+  }
+
+  .beskrivelse {
+    color: var(--rød);
+    font-size: 20px;
+    text-align: left;
+    font-family: var(--ptekst);
+    line-height: 40px;
+  }
+
+  .kontakt-info {
+    margin-top: -41px;
+    margin-left: 85px;
+    color: var(--rød);
+    font-family: var(--ptekst);
+    font-size: 20.7px;
+    text-decoration: none;
+  }
   /**OM MIG-DESKTOP**/
 
   /**FOOTER-DESKTOP**/
