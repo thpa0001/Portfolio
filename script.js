@@ -15,7 +15,7 @@ function menuClick() {
 // Finder elementet med klassen 'design'
 const design = document.querySelector(".design");
 
-// Lytter på scroll-eventet på vinduet
+// Lytter efter når man scroller på vinduet
 window.addEventListener("scroll", () => {
   // Hvor langt vi har scrollet ned fra toppen i pixels
   const scrollTop = window.scrollY;
